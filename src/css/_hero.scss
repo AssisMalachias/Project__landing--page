@@ -1,0 +1,39 @@
+@use '_variaves'as v;
+.hero {
+    width:100%;
+    height:50vh;
+    padding:7vw 16px;
+    background-image: url('../image/hero__background.jpeg');
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.hero__logo__filme  {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        position:relative;
+        top:0;
+        left:0;
+
+        img {
+            width:313px;
+            height:410px;
+        }
+ }
+.hero__button--estrucao {
+         display: flex;
+         justify-content:center;
+         align-items: center;
+        button {
+            width:310px;
+            height:60px;
+            background-color:v.$corPrimeiroBtn;
+            color:v.$corPrimeiraFonts;
+            border:none;
+            border-radius:52px;
+            margin-right:25px;
+        }
+        .hero__button--assitir {
+            background-color:v.$corButtonAssitir;
+          }
+    }
