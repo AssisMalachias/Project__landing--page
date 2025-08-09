@@ -1,0 +1,116 @@
+$primary-color: #7c4dff;
+$bg-dark: #0a0a0a;
+$white: #fff;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: $bg-dark;
+  color: $white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  .logo {
+    font-weight: bold;
+    span { color: $primary-color; }
+  }
+  .nav a {
+    margin: 0 1rem;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('../img/hero.jpg') no-repeat center/cover;
+
+  h1 { font-size: 3rem; }
+
+  .hero__buttons {
+    margin-top: 1rem;
+    .btn-primary {
+      background: $primary-color;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      color: $white;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid $white;
+      color: $white;
+      padding: 0.8rem 1.5rem;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.movies {
+  padding: 3rem 2rem;
+
+  h2 { margin-bottom: 1rem; }
+
+  &__tabs button {
+    background: transparent;
+    color: $white;
+    border: none;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    &.active {
+      background: $primary-color;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+    img { width: 100%; border-radius: 8px; }
+  }
+}
+
+.promo {
+  background: url('../img/promo-bg.jpg') no-repeat center/cover;
+  padding: 3rem;
+  text-align: center;
+
+  .plans {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .plan {
+      background: rgba(0,0,0,0.7);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+  }
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+  &__track {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  img { width: 100vw; }
+}
